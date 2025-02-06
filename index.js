@@ -6,13 +6,13 @@ changeColorButton.addEventListener("click", onChangeColorClick);
 cancelChangeColor.addEventListener("click", onCancelChangeColorClick);
 
 // let timer = 0;
-let timerId = 0;
+let timerId = null;
 
 
 
 function onChangeColorClick() {
     // timerId = setTimeout(changeColorButton, 2000);
-    timerId = setTimeout(changeColor, 2000);
+    timerId = setTimeout(changeColor, 3000);
 
     changeColorButton.disabled = true;
 }
@@ -24,11 +24,11 @@ function onCancelChangeColorClick() {
 
 function changeColor() {
     changeColorButton.disabled = false;
-    if(box.style.backgroundColor == "blue") {
+    if(box.style.backgroundColor == "red") {
         // box.style.backgroudColor = "white";
-        box.style.backgroundColor = "white";
+        box.style.backgroundColor = "yellow";
 
     } else {
-        box.style.backgroundColor = "blue";
+        box.style.backgroundColor = "red";
     }
 }
